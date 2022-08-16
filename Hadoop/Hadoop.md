@@ -58,3 +58,53 @@ MapReduce(MR)
 MR과 Spart의 차이점
 
 - MR은 영구 저장소를 사용하지만 Spark는 메모리에서 RDD를 사용한다.
+
+---
+
+### Apache_Hadoop
+
+
+File system 과 Database의 차이점
+
+- 데이터를 저장하는 목적은 같지만 조회하는 방식의 차이가 있다.
+- 데이터베이스는 인덱싱을 통해 원하는 자료를 빠르게 찾을 수 있다.
+
+<img width="669" alt="스크린샷 2022-08-16 오전 10 32 52" src="https://user-images.githubusercontent.com/89567475/184872455-e1cbd76f-e778-49eb-9cc1-d9094f7b60db.png">
+
+
+Hadoop 분산파일시스템(HDFS) 이해
+
+<img width="482" alt="스크린샷 2022-08-16 오전 10 39 21" src="https://user-images.githubusercontent.com/89567475/184872511-a906f8d9-92c6-4a8d-ab79-27356a5a92b6.png">
+
+- Master(NameNode) - Slave(DataNode) 구조
+- Master - Slave 구조의 단점
+→ Master system에서 오류가 난다면 전체 시스템이 망가짐
+- 큰 파일을 여러개의 Block으로 나누어 저장
+- Slave Node 의 쉬운 확장 가능
+- 신뢰성 보장 - 데이터 복제본 자동 관리
+- 한번 쓰고 많은 읽기가 있는 오퍼레이션에 최적화
+
+Hadoop 저장 특징
+
+- 데이터를 조각내어 서버내 분산 저장
+- 데이터를 복사하여 여러 개를 저장
+
+보조 네임노드(SNN)
+
+- 네임노드(NN)와 보조 네임노드(SNN)
+    - Active/Standby 구조가 아니다
+    - fsimage 와 edits 파일을 주기적으로 병합
+- 체크포인트
+    - 1 시간 주기로 실행
+    - edits 로그가 일정사이즈 이상이면 실행
+- 이슈사항
+    - 네임노드가 SPOF
+    - 보조 네임노드의 장애 상황 감지 툴 없음
+    
+
+Datanode 의 역할
+
+- Datanode는 물리적으로 로컬 파일시스템에 HDFS 데이터를 저장
+- Datanode는 HDFS에 대한 지식이 없음
+- 일반적으로 레이드 구성을 하지않음(JBOD 구성)
+- 블록 리포트 : NameNode가 시작될 때, 그리고 주기적으로 로컬 파일시스템에 있는 모든 HDFS블록들을 검사 후 정상적인 블록의 목록을 만들어 NameNode에 전송
