@@ -14,3 +14,5 @@ $ ssh-keygen -R [ IP or DomainName]
 
 # ex) ssh-keygen -R 127.0.0.1
 ```
+
+또는 ~/.ssh/known_hosts 파일을 직접 수정해도된다.
