@@ -221,3 +221,114 @@ console.log(toArray(1, 2, 3, 4));
 
 - 배열이나 객체에서 원소나 속성을 추출하는 데 사용한다면 **Spread**
 - 인수 목록이나 함수에서 여러 인수를 하나의 배열로 묶는데 사용한다면 **Rest**
+
+
+### Destructuring
+
+객체 (object) 의 경우
+```js
+const person = {
+    name : 'geun',
+    age : 27,
+    country : 'Republic of korea',
+}
+
+const item = {
+    name : 'Macbook',
+    category : 'Laptop',
+    value : 100,
+}
+
+const printName = ({ name }) => {
+    console.log(name);
+}
+
+printName(person);
+// -> geun
+
+printName(item);
+// -> Macbook
+
+
+var {name, age} = person;
+console.log(name, age);
+// -> geun 27
+
+var {name, value} = item;
+console.log(name, value);
+// -> Macbook 100
+
+```
+
+배열 (array)의 경우
+- 불러올 이름을 맘대로 지정가능 인덱스를 기반으로 불러오기 때문
+
+```js
+const hobbies = ['Sports', 'Cooking'];
+const [hobby1, hobby2] = hobbies;
+console.log(hobby1, hobby2);
+// -> Sports Cooking
+```
+
+### 비동기 코드
+
+```js
+setTimeout(() => {
+    console.log('Timer is done!')
+}, 2000);
+
+console.log('Hello!')
+console.log('Hi!')
+
+/** Hello!
+ * Hi!
+ * Timer is done!
+ */
+```
+코드의 출력을 보면 알 수 있듯이 Node.js 와 JavaScript는 비동기적으로 실행됨을 알 수 있다.
+
+- 콜백 함수로 setTimeout 안의 내용을 인식해 모든 동기화 테스크가 완료된 후 비동기 테스크를 답신하게 된다.
+- callback의 늪을 조심하자..!!!
+
+
+### new연산자와 생성자 함수
+
+1. 함수의 이름의 첫 글자는 대문자로 시작
+2. 반드시 `new` 연산자를 붙여 실행
+
+```js
+function User(name) {
+    this.name = name;
+    this.isAdmin = false;
+}
+
+let user = new User('보라')
+
+console.log(user.name); 
+// -> 보라
+console.log(user.isAdmin);
+// -> false
+```
+
+
+### 프로미스 (Todo : 이해가 더 필요)
+
+```js
+const fetchData = callback => {
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            callback('Done!')
+        },1500);
+    });
+};
+
+setTimeout(() => {
+    console.log('Timer is done!');
+    fetchData(text => {
+        console.log(text);
+    });
+}, 2000);
+
+console.log('Hello!');
+console.log('Hi!');
+```
