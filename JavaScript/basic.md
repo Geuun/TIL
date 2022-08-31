@@ -75,3 +75,32 @@ for (var n = 1; n < 10 ; n++) {
     }
 }
 ```
+
+---
+
+## js review
+
+---
+### 변수선언
+
+let & const
+
+- let : 변수는 선언하지만 값을 바꿀수 도 있을 때
+- const : 변수와 값을 바꿀 일이 없을 때
+
+코드에서 무슨 일이 일어나고 있는지 확실히 하기위해 **const**를 사용하는게 좋음
+
+### 화살표 함수
+
+function 구문 없이 함수를 선언할 수 있음
+따라서 아래의 두 함수는 같은 기능
+```js
+const demo = function(x, y, z) {
+    return x + y + z
+};
+
+const demo = (x, y, z) => {
+    return x + y + z
+};
+```
+
