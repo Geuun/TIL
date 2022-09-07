@@ -1,5 +1,7 @@
 # Django_Study
+
 ## 220508
+
 1. Team Repo 생성
 2. Project Conda 가상환경 Setting
 3. 가상환경 Setting 중 가상환경 세팅에 대해 몰랐던점 Study

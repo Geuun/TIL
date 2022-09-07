@@ -26,9 +26,9 @@ $ sudo systemctl enable ssh
 ### Client에서의 접속
 
 ssh client가 설치되어 있지않다면
+
 ```sh
 $ sudo apt-get install openssh-client
 # ssh 접속
 $ ssh username@ipv4_address
 ```
-

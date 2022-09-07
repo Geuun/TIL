@@ -2,8 +2,8 @@
 
 ### 쉘 스크립트란?
 
-- **.sh** 확장자 파일에 스크립트를 작성하여 쉘에게 어떤 명령을 할지 알려주는 것
-- 반복을 줄이기 위함
+-   **.sh** 확장자 파일에 스크립트를 작성하여 쉘에게 어떤 명령을 할지 알려주는 것
+-   반복을 줄이기 위함
 
 ---
 
@@ -37,7 +37,7 @@ cd $HADOOP_HOME/sbin && ./start-all.sh
 ```bash
 # 확인
 $ cat ./hadoop_start_all.sh
- 
+
 #!/bin/bash
 cd $HADOOP_HOME/sbin && ./start-all.sh
 ```
