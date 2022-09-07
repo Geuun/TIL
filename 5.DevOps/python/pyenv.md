@@ -2,9 +2,9 @@
 
 ### pyenv
 
-- python 버전관리 모듈
-- pyenv 로 여러버전의 python을 사용 가능
-- 추가로 venv로 가상환경구성 가능
+-   python 버전관리 모듈
+-   pyenv 로 여러버전의 python을 사용 가능
+-   추가로 venv로 가상환경구성 가능
 
 ### pyenv setting
 
