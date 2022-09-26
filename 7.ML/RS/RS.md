@@ -18,3 +18,18 @@
             -   DCN(Deep Cross Network)
             -   Wide & Deep
         -   DeepFM(Deep Fatorization Machine)
+
+---
+
+추천시스템 (RS)
+
+-   정보 필터링
+    -   컨텐츠 기반 (CB)
+    -   협업 필터링 (CF)
+        -   기억 기반
+            -   사용자기반
+            -   아이템 기반
+        -   모델 기반
+    -   하이브리드
+-   연관성 분석
+-   기타
