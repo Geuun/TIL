@@ -22,7 +22,7 @@ System.out.println(num1 + num2);
 -   자료형이 다른경우 개발자가 직접 형변환을 해주지 않아도 Java 컴파일러가 알아서 형변환을 진행.
 -   자동으로 형변환을 진행하는 방식은 아래와 같다.
 
-![자동형변환]()
+![autotypechange](https://user-images.githubusercontent.com/89567475/192511785-d04f768c-8681-4861-9a8f-48e64a107f30.png)
 
 -   자료형의 크기가 큰 방향으로 정수보다는 실수형으로( 소수점을 보존하기 위해서 )
 
