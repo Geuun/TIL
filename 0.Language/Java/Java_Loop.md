@@ -78,6 +78,8 @@ while(num < 100){
 	num++;
 }
 
+
+
 if(search)
 	System.out.println("찾는 정수: " + num);
 ```
