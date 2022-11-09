@@ -60,8 +60,12 @@
 
 ### 그럼 JPA가 아니라 Hibernate를 사용한다 말해야 하는거아님?
 
+<img width="500" alt="jpa-layer" src="https://user-images.githubusercontent.com/89567475/200828744-4568cf06-0619-497b-a820-e8900640397f.png")
+
 -   멀리멀리 돌아 이제 진짜 우리가 다룰 **Spring Data JPA**에 대해 얘기할 단계이다..!
 
 -   Spring Data JPA는 Spring에서 제공하는 모듈 중 하나인데, 개발자가 JPA를 조금 더 편하게 사용할 수 있게 도와준다.
 -   이는 JPA를 한 단계 더 추상화시킨 `Repository` 라는 인터페이스를 제공함으로써 이루어지는데,
-    `Repository` 인터페이스에 정해진 규칙대로
+    `Repository` 인터페이스에 정해진 규칙대로 메소드만 입력하면 Spring에서 알아서 내부적으로 해당 메소드에 적합한 쿼리를
+    DataBase에 날리는 구현체를 만들어서 Bean으로 등록해준다. (진짜 짱인거같다.)
+-   따라서 JPA를 사용한다 함은 위 첨부된 이미지의 과정을 거쳐서 DataBase와 소통하는 과정을 말한다.
