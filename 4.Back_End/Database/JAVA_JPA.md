@@ -60,7 +60,7 @@
 
 ### 그럼 JPA가 아니라 Hibernate를 사용한다 말해야 하는거아님?
 
-<img width="500" alt="jpa-layer" src="https://user-images.githubusercontent.com/89567475/200828744-4568cf06-0619-497b-a820-e8900640397f.png")
+![jpa-layer](https://user-images.githubusercontent.com/89567475/200828744-4568cf06-0619-497b-a820-e8900640397f.png)
 
 -   멀리멀리 돌아 이제 진짜 우리가 다룰 **Spring Data JPA**에 대해 얘기할 단계이다..!
 
